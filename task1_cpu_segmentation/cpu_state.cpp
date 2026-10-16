@@ -16,7 +16,6 @@ uint8_t CPUState::readByte(SegReg seg, uint16_t off) const {
 }
 
 uint16_t CPUState::readWord(SegReg seg, uint16_t off) const {
-    // Two byte reads so the 16-bit offset wraps inside the segment.
     uint8_t lo = readByte(seg, off);
     uint8_t hi = readByte(seg, static_cast<uint16_t>(off + 1));
     return static_cast<uint16_t>(lo | (hi << 8));
