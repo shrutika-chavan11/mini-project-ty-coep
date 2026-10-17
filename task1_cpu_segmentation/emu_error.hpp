@@ -1,8 +1,4 @@
-// ============================================================================
-// emu_error.hpp  (Task 1 - Member A)
-// One exception type used by the WHOLE emulator (W1, W2, W3).
-// The emulator must report meaningful errors instead of crashing.
-// ============================================================================
+//report meaningful errors instead of crashing.
 #pragma once
 #include <stdexcept>
 #include <string>
@@ -16,10 +12,10 @@ enum class ErrorKind {
     InvalidEncoding,
     IncompleteInstruction,
     NoHandler,          // dispatch table has no handler for the mnemonic
-    StackOverflow,      // reserved for W2
-    StackUnderflow,     // reserved for W2
-    DivideByZero,       // reserved for W2
-    InvalidControlFlow  // reserved for W2
+    StackOverflow,      // for W2
+    StackUnderflow,     // for W2
+    DivideByZero,       // for W2
+    InvalidControlFlow  // for W2
 };
 
 class EmuError : public std::runtime_error {

@@ -1,16 +1,11 @@
-// ============================================================================
-// registers.hpp  (Task 1 - Member A)
+
 // 8086 register file.
 //
 //   General purpose (16-bit): AX CX DX BX SP BP SI DI
 //   8-bit halves            : AL CL DL BL AH CH DH BH
 //   Segment registers       : ES CS SS DS
 //   Instruction pointer     : IP
-//
-// IMPORTANT: the enum values equal the 3-bit register numbers used inside
-// x86 machine code (ModR/M "reg" / "r/m" fields and opcode low bits).
-// So the decoder can simply do  static_cast<Reg16>(bits)  - no lookup table.
-// ============================================================================
+
 #pragma once
 #include <cstdint>
 
